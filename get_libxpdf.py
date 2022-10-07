@@ -68,7 +68,7 @@ def download_and_extract_libxpdf(destdir):
     if not os.path.exists(destdir):
         os.makedirs(destdir)
 
-    lib_url = urljoin(url, 'download/v0.1.3/libxpdf-4.02.tar.gz')
+    lib_url = urljoin(url, "download/v0.1.3/libxpdf-4.02.tar.gz")
     lib_dest_path = os.path.join(destdir, "libxpdf")
 
     if os.path.exists(os.path.join(destdir, libname + lib_version + ".keep")):
