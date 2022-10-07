@@ -58,7 +58,7 @@ def download_and_extract_libxpdf(destdir):
         libname = [name for name in filenames if arch in name][0]
     elif platform.system() == "Linux":
         arch = "x64" if is64() else "x86"
-        libname = download/v0.1.3/libxpdf-4.02.tar.gz
+        libname = ""
     elif platform.system() == "Darwin":
         arch = "x64" if is64() else "x86"
         libname = [name for name in filenames if "macos" in name and arch in name][0]
