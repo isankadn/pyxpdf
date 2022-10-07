@@ -58,7 +58,7 @@ def download_and_extract_libxpdf(destdir):
         libname = [name for name in filenames if arch in name][0]
     elif platform.system() == "Linux":
         arch = "x64" if is64() else "x86"
-        libname = [name for name in filenames if "linux" in name and arch in name][0]
+        libname = download/v0.1.3/libxpdf-4.02.tar.gz
     elif platform.system() == "Darwin":
         arch = "x64" if is64() else "x86"
         libname = [name for name in filenames if "macos" in name and arch in name][0]
@@ -68,7 +68,7 @@ def download_and_extract_libxpdf(destdir):
     if not os.path.exists(destdir):
         os.makedirs(destdir)
 
-    lib_url = urljoin(url, libname)
+    lib_url = urljoin(url, 'download/v0.1.3/libxpdf-4.02.tar.gz')
     lib_dest_path = os.path.join(destdir, "libxpdf")
 
     if os.path.exists(os.path.join(destdir, libname + lib_version + ".keep")):
