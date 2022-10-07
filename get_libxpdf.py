@@ -51,7 +51,8 @@ def download_and_extract_libxpdf(destdir):
     filenames = [
         filename.rsplit("/", 1)[1] for filename in filenames if release_path in filename
     ]
-
+    print (platform.system())
+    print (is64())
     if platform.system() == "Windows":
         arch = "win64" if is64() else "win32"
         libname = [name for name in filenames if arch in name][0]
